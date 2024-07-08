@@ -2,14 +2,19 @@ import { expect } from 'chai';
 import { matrixOfMatrix } from '../matrix.js';
 
 describe('matrixOfMatrix function', function() {
-    it('should return true from a 3x3 matrix that has {1-3} in each and every matrix', function() {
+    it('should return true from a 3x3 matrix that has all ints from 1 to 3 in each and every matrix', function() {
         const result = matrixOfMatrix([[1, 2, 3], [3, 2, 1], [3, 1, 2]]);
         expect(result).to.equal(true);
     });
 
-    it('should return true from a 1x1 matrix', function() {
+    it('should return true from a 1x1 matrix that has 1 as the element', function() {
         const result = matrixOfMatrix([1]);
         expect(result).to.equal(true);
+    });
+
+    it('should return true from a small (2x2) matrix that has 1 and 2 in both matrices', function() {
+      const result = matrixOfMatrix([[1, 2], [1, 2]]);
+      expect(result).to.equal(true);
     });
 
     it('should return true from a long (10x10) matrix that has all the ints from 1 through 10 in each and every matrix', function() {
@@ -28,7 +33,7 @@ describe('matrixOfMatrix function', function() {
         expect(result).to.equal(true);
     });
 
-    it('should return false from a 3x3 matrix that does not have {1-3} in each and every matrix', function() {
+    it('should return false from a 3x3 matrix that does not have all integers from 1 to 3 in each and every matrix', function() {
         const result = matrixOfMatrix([[1, 2, 3], [2, 3, 1], [3, 3, 1]]);
         expect(result).to.equal(false);
     });
