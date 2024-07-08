@@ -27,5 +27,8 @@ describe('matrixOfMatrix function', function() {
         expect(result).to.equal(false);
     });
 
-   
+    it('should return false from a 1x1 matrix that does not have 1 as the element', function() {
+        const result = matrixOfMatrix([23]);
+        expect(result).to.equal(false);
+    });  
 });
