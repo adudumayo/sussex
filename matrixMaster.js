@@ -6,10 +6,15 @@ export function matrixOfMatrices(matrix) {
          return false;
       }
 
-      for (let i = 0; i < matrix.length; i++) {
-         var element = matrix[i];
-         console.log(element);
-      }
+      for (let outerIdx = 0; outerIdx < matrix.length; outerIdx++) {
+         var innerMatrix = matrix[outerIdx];
+
+         for (let innerIdx = 0; innerIdx < innerMatrix.length; innerIdx++) {
+            var element = innerMatrix[innerIdx];
+            console.log(element);
+         }
+
+      } 
 
    } else {
       return false;
