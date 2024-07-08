@@ -1,5 +1,8 @@
 export function matrixOfMatrices(matrix) {
    if (Array.isArray(matrix)) {
+
+      const digitRegex = /^\d+$/;
+
       if (matrix.length === 0) {
          return false;
       } else if (matrix.length === 1 && matrix[0] !== 1) {
