@@ -21,4 +21,11 @@ describe('matrixOfMatrix function', function() {
         const result = matrixOfMatrix([]);
         expect(result).to.equal(false);
     });
+
+    it('should return false from a matrix that contains a non integer character', function() {
+        const result = matrixOfMatrix([[1, 2, 3, '4'], [2, 3, 4, 1], [2, 4, 1, 3], [3, 2, 1, 4]]);
+        expect(result).to.equal(false);
+    });
+
+   
 });
