@@ -1,24 +1,24 @@
 import { expect } from 'chai';
-import { matrixOfMatrix } from '../matrixMaster.js';
+import { matrixOfMatrices } from '../matrixMaster.js';
 
-describe('matrixOfMatrix function', function() {
+describe('matrixOfMatrices function', function() {
     it('should return true from a 3x3 matrix that has all ints from 1 to 3 in each and every matrix', function() {
-        const result = matrixOfMatrix([[1, 2, 3], [3, 2, 1], [3, 1, 2]]);
+        const result = matrixOfMatrices([[1, 2, 3], [3, 2, 1], [3, 1, 2]]);
         expect(result).to.equal(true);
     });
 
     it('should return true from a 1x1 matrix that has 1 as the element', function() {
-        const result = matrixOfMatrix([1]);
+        const result = matrixOfMatrices([1]);
         expect(result).to.equal(true);
     });
 
     it('should return true from a small (2x2) matrix that has 1 and 2 in both matrices', function() {
-      const result = matrixOfMatrix([[1, 2], [1, 2]]);
+      const result = matrixOfMatrices([[1, 2], [1, 2]]);
       expect(result).to.equal(true);
     });
 
     it('should return true from a long (10x10) matrix that has all the ints from 1 through 10 in each and every matrix', function() {
-        const result = matrixOfMatrix([
+        const result = matrixOfMatrices([
   [6, 4, 9, 3, 8, 1, 7, 2, 10, 5],
   [10, 7, 1, 3, 8, 4, 6, 2, 5, 9],
   [9, 3, 2, 7, 4, 5, 1, 10, 8, 6],
@@ -34,22 +34,22 @@ describe('matrixOfMatrix function', function() {
     });
 
     it('should return false from a 3x3 matrix that does not have all integers from 1 to 3 in each and every matrix', function() {
-        const result = matrixOfMatrix([[1, 2, 3], [2, 3, 1], [3, 3, 1]]);
+        const result = matrixOfMatrices([[1, 2, 3], [2, 3, 1], [3, 3, 1]]);
         expect(result).to.equal(false);
     });
 
     it('should return false from an empty matrix', function() {
-        const result = matrixOfMatrix([]);
+        const result = matrixOfMatrices([]);
         expect(result).to.equal(false);
     });
 
     it('should return false from a matrix that contains a non integer character', function() {
-        const result = matrixOfMatrix([[1, 2, 3, '4'], [2, 3, 4, 1], [2, 4, 1, 3], [3, 2, 1, 4]]);
+        const result = matrixOfMatrices([[1, 2, 3, '4'], [2, 3, 4, 1], [2, 4, 1, 3], [3, 2, 1, 4]]);
         expect(result).to.equal(false);
     });
 
     it('should return false from a 1x1 matrix that does not have 1 as the element', function() {
-        const result = matrixOfMatrix([23]);
+        const result = matrixOfMatrices([23]);
         expect(result).to.equal(false);
     });  
 });
