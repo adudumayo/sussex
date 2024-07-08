@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { matrixOfMatrix } from '../matrix.js';
+import { matrixOfMatrix } from '../matrixMaster.js';
 
 describe('matrixOfMatrix function', function() {
     it('should return true from a 3x3 matrix that has all ints from 1 to 3 in each and every matrix', function() {
