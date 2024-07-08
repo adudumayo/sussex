@@ -5,6 +5,6 @@
   },
   "type": "module",
   "scripts": {
-    "test": "mocha './tests/matrix.test.js'"
+    "test": "mocha './tests/matrixMaster.test.js'"
   }
 }
