@@ -7,6 +7,11 @@ describe('matrixOfMatrix function', function() {
         expect(result).to.equal(true);
     });
 
+    it('should return true from a 1x1 marix', function() {
+        const result = matrixOfMatrix([1]);
+        expect(result).to.equal(true);
+    });
+
     it('should return false from a 3x3 matrix that does not have {1-3} in each and every matrix', function() {
         const result = matrixOfMatrix([[1, 2, 3], [2, 3, 1], [3, 3, 1]]);
         expect(result).to.equal(false);
