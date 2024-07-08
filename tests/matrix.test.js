@@ -7,7 +7,7 @@ describe('matrixOfMatrix function', function() {
         expect(result).to.equal(true);
     });
 
-    it('should return true from a 1x1 marix', function() {
+    it('should return true from a 1x1 matrix', function() {
         const result = matrixOfMatrix([1]);
         expect(result).to.equal(true);
     });
